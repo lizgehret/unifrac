@@ -40,7 +40,7 @@ class StateUnifracTests(unittest.TestCase):
 
     def get_data_path(self, filename):
         # adapted from qiime2.plugin.testing.TestPluginBase
-        return importlib.resources.files(self.package) / 'data' / filename
+        return importlib.resources.files(self.package) / 'data' / str(filename)
 
     def test_meta_unifrac(self):
         """meta_unifrac should give correct result on sample trees"""

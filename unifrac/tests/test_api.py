@@ -114,7 +114,7 @@ class UnifracAPITests(unittest.TestCase):
 
     def get_data_path(self, filename):
         # adapted from qiime2.plugin.testing.TestPluginBase
-        return importlib.resources.files(self.package) / 'data' / filename
+        return importlib.resources.files(self.package) / 'data' / str(filename)
 
     def test_unweighted_root_eval_issue_46(self):
         tree = self.get_data_path('crawford.tre')
